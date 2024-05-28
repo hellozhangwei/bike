@@ -15,9 +15,16 @@ along with this software (see the LICENSE.md file). If not, see
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         screen-theme-type-enum-id="STT_POP_COMMERCE" standalone="true"
         require-authentication="anonymous-view" login-path="/popc/Login">
-    <subscreens default-item="landing.amp.html"/>
+    <subscreens default-item="landing"/>
 
     <widgets>
+        <render-mode><text type="html"><![CDATA[ <!DOCTYPE html><html ⚡="" lang="en">]]></text></render-mode>
+        <render-mode><text type="html" location="component://bike/screen/includes/head.amp.ftl"/></render-mode>
+        <render-mode><text type="html"><![CDATA[ <body>]]></text></render-mode>
+        <render-mode><text type="html" location="component://bike/screen/includes/header.amp.ftl"/></render-mode>
+        <render-mode><text type="html" location="component://bike/screen/includes/sidebar.amp.ftl"/></render-mode>
         <subscreens-active/>
+        <render-mode><text type="html" location="component://bike/screen/includes/footer.amp.ftl"/></render-mode>
+        <render-mode><text type="html"><![CDATA[</body></html>]]></text></render-mode>
     </widgets>
 </screen>
