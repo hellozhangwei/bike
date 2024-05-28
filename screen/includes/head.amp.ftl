@@ -71,13 +71,14 @@
       async=""
   ></script>
 
+  <#list html_scripts?if_exists as html_script>
+    <script custom-template="${html_script.customTemplate}" src="${html_script.src}" async=""></script>
+  </#list>
+
   <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
       rel="stylesheet"
   />
-  <#list html_scripts?if_exists as html_script>
-    <script custom-template="${html_script.customTemplate}" src="${html_script.src}" async=""></script>
-  </#list>
   <#include "component://bike/screen/bike/landing.css"/>
 
 </head>
