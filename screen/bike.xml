@@ -17,6 +17,14 @@ along with this software (see the LICENSE.md file). If not, see
         require-authentication="anonymous-view" login-path="/popc/Login">
     <subscreens default-item="landing"/>
 
+    <pre-actions><script><![CDATA[
+        html_scripts.add([customTemplate:'amp-list', src:'https://cdn.ampproject.org/v0/amp-list-0.1.js'])
+        html_scripts.add([customTemplate:'amp-bind', src:'https://cdn.ampproject.org/v0/amp-bind-0.1.js'])
+        html_scripts.add([customTemplate:'amp-mustache', src:'https://cdn.ampproject.org/v0/amp-mustache-0.1.js'])
+
+        html_stylesheets.add('')
+        ]]></script></pre-actions>
+
     <widgets>
         <render-mode><text type="html"><![CDATA[ <!DOCTYPE html><html ⚡="" lang="en">]]></text></render-mode>
         <render-mode><text type="html" location="component://bike/screen/includes/head.amp.ftl"/></render-mode>
