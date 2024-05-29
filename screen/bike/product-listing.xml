@@ -15,11 +15,18 @@ along with this software (see the LICENSE.md file). If not, see
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         require-authentication="false">
-    <pre-actions><script><![CDATA[
+    <pre-actions>
+
+        <script><![CDATA[
         html_scripts.add([customTemplate:'amp-list', src:'https://cdn.ampproject.org/v0/amp-list-0.1.js'])
         html_scripts.add([customTemplate:'amp-bind', src:'https://cdn.ampproject.org/v0/amp-bind-0.1.js'])
         html_scripts.add([customTemplate:'amp-mustache', src:'https://cdn.ampproject.org/v0/amp-mustache-0.1.js'])
-        ]]></script></pre-actions>
+        ]]></script>
+
+        <set field="html_title" value="Product Listing"/>
+
+    </pre-actions>
+
     <widgets>
         <render-mode><text type="html" location="component://bike/screen/bike/product-listing.amp.ftl"/></render-mode>
     </widgets>

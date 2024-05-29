@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8" />
-  <title>Commerce</title>
+  <title>${html_title!}</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="amp-google-client-id-api" content="googleanalytics" />
 

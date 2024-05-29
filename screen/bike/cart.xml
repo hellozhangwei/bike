@@ -15,9 +15,14 @@ along with this software (see the LICENSE.md file). If not, see
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         require-authentication="false">
-    <pre-actions><script><![CDATA[
+    <pre-actions>
+        <script><![CDATA[
         html_scripts.add([customTemplate:'amp-carousel', src:'https://cdn.ampproject.org/v0/amp-carousel-0.1.js'])
-        ]]></script></pre-actions>
+        ]]></script>
+
+        <set field="html_title" value="Cart"/>
+
+    </pre-actions>
     <widgets>
         <render-mode><text type="html" location="component://bike/screen/bike/cart.amp.ftl"/></render-mode>
     </widgets>
