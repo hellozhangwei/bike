@@ -79,6 +79,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
       rel="stylesheet"
   />
-  <#include "component://bike/screen/bike/landing.css"/>
+
+  <style amp-custom="">
+    <#include "component://bike/screen/bikestatic/css/page.css"/>
+  </style>
 
 </head>
