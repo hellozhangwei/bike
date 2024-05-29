@@ -1,22 +1,3 @@
-
-<!--    <script
-      custom-element="amp-list"
-      src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
-      async=""
-    ></script>
-    <script
-      custom-element="amp-bind"
-      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-      async=""
-    ></script>
-
-    <script
-      custom-template="amp-mustache"
-      src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"
-      async=""
-    ></script>-->
-
-
 <main id="content" role="main" class="main commerce-listing">
   <amp-state id="products">
     <script type="application/json">
@@ -149,14 +130,15 @@
       <amp-list
         class="mx1 md-mxn1"
         [src]="'api/' + products.filter + '-' + products.category + '-products.json'"
-        src="api/high-low-all-products.json"
+        src="/rest/s1/pop/categories/BIKE/products"
+        items="productList"
         height="1000"
         width="300"
         layout="responsive"
       >
         <template type="amp-mustache">
           <a
-            href="product-details.amp.html"
+            href="product-details"
             target="_self"
             class="commerce-listing-product text-decoration-none inline-block col-6 md-col-4 lg-col-3 px1 mb2 md-mb4 relative"
           >
@@ -164,15 +146,15 @@
               <div>
                 <amp-img
                   class="commerce-listing-product-image mb2"
-                  src="{{image}}"
+                  src="{{smallImageInfo.contentLocation}}"
                   width="340"
                   height="340"
                   layout="responsive"
-                  alt="{{ name }}"
+                  alt="{{ productName }}"
                   noloading=""
                   ><div placeholder="" class="commerce-loader"></div
                 ></amp-img>
-                <h2 class="commerce-listing-product-name h6">{{ name }}</h2>
+                <h2 class="commerce-listing-product-name h6">{{ productName }}</h2>
                 {{ description }}
               </div>
               <div class="h6 mt1">&#163;{{ price }}</div>

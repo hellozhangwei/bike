@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This software is in the public domain under CC0 1.0 Universal plus a
+Grant of Patent License.
+
+To the extent possible under law, the author(s) have dedicated all
+copyright and related and neighboring rights to this software to the
+public domain worldwide. This software is distributed without any
+warranty.
+
+You should have received a copy of the CC0 Public Domain Dedication
+along with this software (see the LICENSE.md file). If not, see
+<http://creativecommons.org/publicdomain/zero/1.0/>.
+-->
+<entity-facade-xml type="demo">
+
+
+    <mantle.product.category.ProductCategory productCategoryId="BIKE" productCategoryTypeEnumId="PctCatalog" categoryName="Bike" description=""/>
+
+    <mantle.product.Product productId="BIKE_CHAIN_SET" productTypeEnumId="PtAsset" assetTypeEnumId="AstTpInventory" assetClassEnumId="AsClsInventoryFin"
+            chargeShipping="Y" returnable="Y" productName="Chain set" description="Silver alloy construction for durability">
+
+        <categories productCategoryId="BIKE" fromDate="1265184000000" sequenceNum="3"/>
+        <prices productPriceId="BIKE_CHAIN_SET_CLT" pricePurposeEnumId="PppPurchase" priceTypeEnumId="PptCurrent" fromDate="1265184000000"
+                minQuantity="1" price="867" priceUomId="USD"/>
+
+        <contents productContentId="BIKE_CHAIN_SET_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
+                  contentLocation="/bikestatic/img/product/product-3.jpg"/>
+    </mantle.product.Product>
+
+    <mantle.product.Product productId="BIKE_HORN_HANDLES" productTypeEnumId="PtAsset" assetTypeEnumId="AstTpInventory" assetClassEnumId="AsClsInventoryFin"
+            chargeShipping="Y" returnable="Y" productName="Chain set" description="Grippingly durable and stylish.">
+
+        <categories productCategoryId="BIKE" fromDate="1265184000000" sequenceNum="3"/>
+        <prices productPriceId="BIKE_HORN_HANDLES_CLT" pricePurposeEnumId="PppPurchase" priceTypeEnumId="PptCurrent" fromDate="1265184000000"
+                minQuantity="1" price="838" priceUomId="USD"/>
+
+        <contents productContentId="BIKE_HORN_HANDLES_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
+                  contentLocation="/bikestatic/img/product/product-7.jpg"/>
+    </mantle.product.Product>
+
+</entity-facade-xml>

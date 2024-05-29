@@ -18,7 +18,7 @@
   <nav class="ampstart-sidebar-nav ampstart-nav">
     <ul class="list-reset m0 p0 ampstart-label">
       <li>
-        <a href="landing.amp.html" class="text-decoration-none block 22">
+        <a href="landing" class="text-decoration-none block 22">
           <amp-img
             src="/bikestatic/img/e-commerce/logo-nav.png"
             width="279"
@@ -33,15 +33,13 @@
         </a>
       </li>
       <li class="ampstart-nav-item">
-        <a class="ampstart-nav-link" href="product-listing.amp.html"
-          >Products</a
-        >
+        <a class="ampstart-nav-link" href="product-listing">Products</a>
       </li>
       <li class="ampstart-nav-item">
-        <a class="ampstart-nav-link" href="blog-listing.amp.html">Blog</a>
+        <a class="ampstart-nav-link" href="blog-listing">Blog</a>
       </li>
       <li class="ampstart-nav-item">
-        <a class="ampstart-nav-link" href="contact.amp.html">Contact us</a>
+        <a class="ampstart-nav-link" href="contact">Contact us</a>
       </li>
     </ul>
   </nav>
