@@ -14,6 +14,7 @@ along with this software (see the LICENSE.md file). If not, see
 -->
 <entity-facade-xml type="demo">
 
+    <moqui.security.UserGroupPreference userGroupId="ALL_USERS" preferenceKey="mantle.content.root" preferenceValue="file:runtime"/>
 
     <mantle.product.category.ProductCategory productCategoryId="BIKE" productCategoryTypeEnumId="PctCatalog" categoryName="Bike" description=""/>
 
@@ -25,18 +26,41 @@ along with this software (see the LICENSE.md file). If not, see
                 minQuantity="1" price="867" priceUomId="USD"/>
 
         <contents productContentId="BIKE_CHAIN_SET_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
-                  contentLocation="/bikestatic/img/product/product-3.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/product-3.jpg"/>
     </mantle.product.Product>
 
     <mantle.product.Product productId="BIKE_HORN_HANDLES" productTypeEnumId="PtAsset" assetTypeEnumId="AstTpInventory" assetClassEnumId="AsClsInventoryFin"
-            chargeShipping="Y" returnable="Y" productName="Chain set" description="Grippingly durable and stylish.">
+            chargeShipping="Y" returnable="Y" productName="Horn Handles" description="Grippingly durable and stylish.">
 
         <categories productCategoryId="BIKE" fromDate="1265184000000" sequenceNum="3"/>
         <prices productPriceId="BIKE_HORN_HANDLES_CLT" pricePurposeEnumId="PppPurchase" priceTypeEnumId="PptCurrent" fromDate="1265184000000"
                 minQuantity="1" price="838" priceUomId="USD"/>
 
         <contents productContentId="BIKE_HORN_HANDLES_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
-                  contentLocation="/bikestatic/img/product/product-7.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/product-7.jpg"/>
+        <contents productContentId="BIKE_HORN_HANDLES_DS" productContentTypeEnumId="PcntDescription" locale="en_US"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/descriptionSmall.amp.html"/>
+        <contents productContentId="BIKE_HORN_HANDLES_DL" productContentTypeEnumId="PcntDescriptionLong" locale="en_US"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/descriptionLong.amp.html"/>
+<!--
+
+        <contents productContentId="BIKE_HORN_HANDLES_DS" productContentTypeEnumId="PcntDescription" locale="en_US"
+                  contentLocation="dbresource://mantle/content/product/BIKE_HORN_HANDLES/descriptionSmall.html"/>
+        <contents productContentId="BIKE_HORN_HANDLES_DL" productContentTypeEnumId="PcntDescriptionLong" locale="en_US"
+                  contentLocation="dbresource://mantle/content/product/BIKE_HORN_HANDLES/descriptionLong.html"/>
+
+        <dbResources resourceId="MCNT_PROD_BIKE_HORN_HANDLES" filename="BIKE_HORN_HANDLES" isFile="N" parentResourceId="MCNT_PRODUCT"/>
+        <dbResources resourceId="BIKE_HORN_HANDLES_DS" filename="descriptionSmall.html" isFile="Y" parentResourceId="MCNT_PROD_BIKE_HORN_HANDLES"/>
+        <moqui.resource.DbResourceFile resourceId="BIKE_HORN_HANDLES_DS" rootVersionName="01" mimeType="text/html" versionName="01">
+            <fileData><![CDATA[PHA+NTAlIGNvdHRvbiAvIDUwJSBQb2x5ZXN0ZXI8L3A+DQo8cD5JbXBvcnRlZDwvcD4NCjxwPlppcHBlciBjbG9zdXJlPC9wPg0KPHA+TWFjaGluZSB3YXNoPC9wPg0KPHA+WmlwLXVwIGhvb2RlZCBzd2VhdHNoaXJ0IGluIDcuOC1vdW5jZSBmbGVlY2UgbWFkZSB3aXRoIHVwIHRvIDUlIHBvbHllc3RlciBjcmVhdGVkIGZyb20gcmVjeWNsZWQgcGxhc3RpYy48L3A+DQo8cD5QaWxsLXJlc2lzdGFudCBmYWJyaWMgd2l0aCBoaWdoLXN0aXRjaCBkZW5zaXR5IGZvciBkdXJhYmlsaXR5LiA8L3A+DQo8cD5SaWJiZWQgd2Fpc3RiYW5kIGFuZCBjdWZmcywgc3BsaXQga2FuZ2Fyb28gcG9ja2V0LjwvcD4=]]></fileData>
+        </moqui.resource.DbResourceFile>
+
+        <dbResources resourceId="BIKE_HORN_HANDLES_DL" filename="descriptionLong.html" isFile="Y" parentResourceId="MCNT_PROD_BIKE_HORN_HANDLES"/>
+        <moqui.resource.DbResourceFile resourceId="BIKE_HORN_HANDLES_DL" rootVersionName="01" mimeType="text/html" versionName="01">
+            <fileData><![CDATA[PHA+NTAlIGNvdHRvbiAvIDUwJSBQb2x5ZXN0ZXI8L3A+DQo8cD5JbXBvcnRlZDwvcD4NCjxwPlppcHBlciBjbG9zdXJlPC9wPg0KPHA+TWFjaGluZSB3YXNoPC9wPg0KPHA+WmlwLXVwIGhvb2RlZCBzd2VhdHNoaXJ0IGluIDcuOC1vdW5jZSBmbGVlY2UgbWFkZSB3aXRoIHVwIHRvIDUlIHBvbHllc3RlciBjcmVhdGVkIGZyb20gcmVjeWNsZWQgcGxhc3RpYy48L3A+DQo8cD5QaWxsLXJlc2lzdGFudCBmYWJyaWMgd2l0aCBoaWdoLXN0aXRjaCBkZW5zaXR5IGZvciBkdXJhYmlsaXR5LiA8L3A+DQo8cD5SaWJiZWQgd2Fpc3RiYW5kIGFuZCBjdWZmcywgc3BsaXQga2FuZ2Fyb28gcG9ja2V0LjwvcD4=]]></fileData>
+        </moqui.resource.DbResourceFile>
+-->
+
     </mantle.product.Product>
 
 </entity-facade-xml>

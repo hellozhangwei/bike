@@ -138,7 +138,7 @@
       >
         <template type="amp-mustache">
           <a
-            href="product-details"
+            href="product-details?productId={{productId}}"
             target="_self"
             class="commerce-listing-product text-decoration-none inline-block col-6 md-col-4 lg-col-3 px1 mb2 md-mb4 relative"
           >
@@ -146,7 +146,7 @@
               <div>
                 <amp-img
                   class="commerce-listing-product-image mb2"
-                  src="{{smallImageInfo.contentLocation}}"
+                  src="content/productImage/{{smallImageInfo.productContentId}}"
                   width="340"
                   height="340"
                   layout="responsive"

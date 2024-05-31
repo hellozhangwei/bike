@@ -223,8 +223,8 @@
       class="col-12 md-col-6 flex flex-wrap content-start px2 md-pl5 md-pr7 md-pt4"
     >
       <div class="col-6 self-start pb2">
-        <h1 class="h3 md-h2">Road Bike</h1>
-        <div class="h4 md-h3">£470</div>
+        <h1 class="h3 md-h2">${product.productName}</h1>
+        <div class="h4 md-h3">$ ${product.price}</div>
       </div>
       <div class="col-6 self-start right-align">
         <h2 class="h7 block pb1">Reviews</h2>
@@ -282,7 +282,7 @@
         </svg>
       </div>
       <div class="col-12 self-start pb4">
-        Built with lightweight aluminum for speed.
+        ${product.description}
       </div>
       <hr class="mb4" />
       <div class="col-6 self-start pb4">
@@ -344,13 +344,14 @@
       <div class="col-12 md-col-6 px2 md-pl7 commerce-product-desc">
         <section class="pt3 md-pt6 md-px4">
           <h2 class="h5 md-h4">Overview</h2>
-          <p class="mt2 mb3">
+          <!--<p class="mt2 mb3">
             Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu
             rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut,
             sodales id. Velit lacus, fermentum neque et sagittis, ac
             venenatis volutpat, dolore neque feugiat proin fermentum odio,
             odio arcu in eu wisi.
-          </p>
+          </p>-->
+          <p class="mt2 mb3">${product.descriptionSmall!}</p>
           <hr />
           <div class="pt3 md-pt4 md-pb4">
             <h2 class="h5 md-h4 mb2">Reviews</h2>
@@ -543,6 +544,8 @@
           </div>
         </section>
       </div>
+      ${product.descriptionLong!}
+      <!--
       <div class="col-12 md-col-5 md-pr7 md-pl5">
         <section class="pt3 pb3 md-pb4 px2 md-pt6">
           <h2 class="h5 md-h4">Size Guide</h2>
@@ -664,6 +667,7 @@
           </div>
         </section>
       </div>
+      -->
       <section class="commerce-related-products col-12 px2 md-mt5 md-px4">
         <div class="col-12 mt3 md-mt4">
           <h2 class="h5 md-h4">You may also like</h2>
