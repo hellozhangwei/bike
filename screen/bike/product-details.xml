@@ -18,45 +18,6 @@ along with this software (see the LICENSE.md file). If not, see
 
     <parameter name="productId"/>
 
-    <transition name="images" method="get" read-only="true">
-        <path-parameter name="productId"/>
-        <actions>
-            <script>
-                def images = [
-                    price: "£470",
-                    selectedColor: "black",
-                    black: [
-                        thumb: [
-                            image1: "/bikestatic/img/e-commerce/product/dark-small-1.jpg",
-                            image2: "/bikestatic/img/e-commerce/product/dark-small-2.jpg",
-                            image3: "/bikestatic/img/e-commerce/product/dark-small-3.jpg"
-                        ],
-                        large: [
-                            image1: "/bikestatic/img/e-commerce/product/dark-large-1.jpg",
-                            image2: "/bikestatic/img/e-commerce/product/dark-large-2.jpg",
-                            image3: "/bikestatic/img/e-commerce/product/dark-large-3.jpg"
-                        ]
-                    ],
-                    blue: [
-                        thumb: [
-                            image1: "/bikestatic/img/e-commerce/product/light-small-1.jpg",
-                            image2: "/bikestatic/img/e-commerce/product/light-small-2.jpg",
-                            image3: "/bikestatic/img/e-commerce/product/light-small-3.jpg"
-                        ],
-                        large: [
-                            image1: "/bikestatic/img/e-commerce/product/light-large-1.jpg",
-                            image2: "/bikestatic/img/e-commerce/product/light-large-2.jpg",
-                            image3: "/bikestatic/img/e-commerce/product/light-large-3.jpg"
-                        ]
-                    ],
-                    selectedSlide: 0
-                ]
-
-                ec.web.sendJsonResponse(images)</script>
-        </actions>
-        <default-response type="none"/>
-    </transition>
-
     <pre-actions>
         <script><![CDATA[
         html_scripts.add([customTemplate:'amp-bind', src:'https://cdn.ampproject.org/v0/amp-bind-0.1.js'])
@@ -71,12 +32,64 @@ along with this software (see the LICENSE.md file). If not, see
 
     <actions>
         <service-call name="popstore.ProductServices.get#ProductInfo" out-map="product" in-map="[productId:productId]"/>
-       <!-- <set field="smallImageList" from="[]"/>
+
+        <script>
+            def imagesMap = [
+                price: "£470",
+                selectedColor: "black",
+                black: [
+                    thumb: [
+                        image1: "/bikestatic/img/e-commerce/product/dark-small-1.jpg",
+                        image2: "/bikestatic/img/e-commerce/product/dark-small-2.jpg",
+                        image3: "/bikestatic/img/e-commerce/product/dark-small-3.jpg"
+                    ],
+                    large: [
+                        image1: "/bikestatic/img/e-commerce/product/dark-large-1.jpg",
+                        image2: "/bikestatic/img/e-commerce/product/dark-large-2.jpg",
+                        image3: "/bikestatic/img/e-commerce/product/dark-large-3.jpg"
+                    ]
+                ],
+                blue: [
+                    thumb: [
+                        image1: "/bikestatic/img/e-commerce/product/light-small-1.jpg",
+                        image2: "/bikestatic/img/e-commerce/product/light-small-2.jpg",
+                        image3: "/bikestatic/img/e-commerce/product/light-small-3.jpg"
+                    ],
+                    large: [
+                        image1: "/bikestatic/img/e-commerce/product/light-large-1.jpg",
+                        image2: "/bikestatic/img/e-commerce/product/light-large-2.jpg",
+                        image3: "/bikestatic/img/e-commerce/product/light-large-3.jpg"
+                    ]
+                ],
+                selectedSlide: 0
+            ]
+
+        </script>
+
+        <set field="black_thumb" from="[:]"/>
+        <set field="black_large" from="[:]"/>
+        <set field="largeImages" from="[]"/>
+        <set field="smallImages" from="[]"/>
         <iterate list="product.contentList" entry="ct">
             <if condition="ct.productContentTypeEnumId == 'PcntImageSmall'">
-                <script>smallImageList.add(ct)</script>
+                <script>
+                    black_thumb.put("image"+ct.sequenceNum,"content/productImage/${ct.productContentId}")
+                    smallImages.add(ct)
+                </script>
             </if>
-        </iterate>-->
+            <if condition="ct.productContentTypeEnumId == 'PcntImageLarge'">
+                <script>
+                    black_large.put("image"+ct.sequenceNum,"content/productImage/${ct.productContentId}")
+                    largeImages.add(ct)
+                </script>
+            </if>
+        </iterate>
+        <script>imagesMap.black.thumb=black_thumb</script>
+        <script>imagesMap.blue.thumb=black_thumb</script>
+        <script>imagesMap.black.large=black_large</script>
+        <script>imagesMap.blue.large=black_large</script>
+
+        <set field="imagesJson" from="org.moqui.impl.context.ContextJavaUtil.jacksonMapper.writeValueAsString(imagesMap)"/>
 
     </actions>
 

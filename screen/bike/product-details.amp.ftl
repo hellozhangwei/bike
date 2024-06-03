@@ -91,42 +91,11 @@
     </div>
   </div>
 
-  <amp-state id="product" src="product-details/images"></amp-state>
-  <!--
   <amp-state id="product">
     <script type="application/json">
-      {
-        "price": "£470",
-        "selectedColor": "black",
-        "black": {
-          "thumb": {
-            "image1": "/bikestatic/img/e-commerce/product/dark-small-1.jpg",
-            "image2": "/bikestatic/img/e-commerce/product/dark-small-2.jpg",
-            "image3": "/bikestatic/img/e-commerce/product/dark-small-3.jpg"
-          },
-          "large": {
-            "image1": "/bikestatic/img/e-commerce/product/dark-large-1.jpg",
-            "image2": "/bikestatic/img/e-commerce/product/dark-large-2.jpg",
-            "image3": "/bikestatic/img/e-commerce/product/dark-large-3.jpg"
-          }
-        },
-        "blue": {
-          "thumb": {
-            "image1": "/bikestatic/img/e-commerce/product/light-small-1.jpg",
-            "image2": "/bikestatic/img/e-commerce/product/light-small-2.jpg",
-            "image3": "/bikestatic/img/e-commerce/product/light-small-3.jpg"
-          },
-          "large": {
-            "image1": "/bikestatic/img/e-commerce/product/light-large-1.jpg",
-            "image2": "/bikestatic/img/e-commerce/product/light-large-2.jpg",
-            "image3": "/bikestatic/img/e-commerce/product/light-large-3.jpg"
-          }
-        },
-        "selectedSlide": 0
-      }
+      ${imagesJson}
     </script>
   </amp-state>
-  -->
 
   <section class="flex flex-wrap pb4 md-pb7">
     <div class="col-12 md-col-6 px2 pt2 md-pl7 md-pt4">
@@ -138,45 +107,21 @@
         [slide]="product.selectedSlide"
         on="slideChange: AMP.setState({product: {selectedSlide: event.index}})"
       >
-        <amp-img
-          [src]="product[product.selectedColor].large.image1"
-          src="/bikestatic/img/e-commerce/product/dark-large-1.jpg"
-          width="1280"
-          height="720"
-          layout="responsive"
-          role="button"
-          tabindex="0"
-          alt="product image"
-          noloading=""
-        >
-          <div placeholder="" class="commerce-loader"></div>
-        </amp-img>
-        <amp-img
-          [src]="product[product.selectedColor].large.image2"
-          src="/bikestatic/img/e-commerce/product/dark-large-2.jpg"
-          width="1280"
-          height="720"
-          layout="responsive"
-          role="button"
-          tabindex="0"
-          alt="product image"
-          noloading=""
-        >
-          <div placeholder="" class="commerce-loader"></div>
-        </amp-img>
-        <amp-img
-          [src]="product[product.selectedColor].large.image3"
-          src="/bikestatic/img/e-commerce/product/dark-large-3.jpg"
-          width="1280"
-          height="720"
-          layout="responsive"
-          role="button"
-          tabindex="0"
-          alt="product image"
-          noloading=""
-        >
-          <div placeholder="" class="commerce-loader"></div>
-        </amp-img>
+        <#list largeImages as img>
+          <amp-img
+              [src]="product[product.selectedColor].large.image${img.sequenceNum}"
+              src="content/productImage/${img.productContentId}"
+              width="1280"
+              height="720"
+              layout="responsive"
+              role="button"
+              tabindex="0"
+              alt="${img.description}"
+              noloading=""
+          >
+            <div placeholder="${img.description}" class="commerce-loader"></div>
+          </amp-img>
+      </#list>
       </amp-carousel>
 
       <amp-selector
@@ -185,40 +130,20 @@
         on="select:AMP.setState({product: {selectedSlide: event.targetOption}})"
       >
         <ul class="list-reset inline-block">
-          <li class="inline-block commerce-product-thumb">
-            <amp-img
-              option="0"
-              layout="responsive"
-              selected="selected"
-              [src]="product[product.selectedColor].thumb.image1"
-              src="/bikestatic/img/e-commerce/product/dark-small-1.jpg"
-              width="320"
-              height="180"
-              alt="thumbnail"
-            ></amp-img>
-          </li>
-          <li class="inline-block commerce-product-thumb">
-            <amp-img
-              option="1"
-              layout="responsive"
-              [src]="product[product.selectedColor].thumb.image2"
-              src="/bikestatic/img/e-commerce/product/dark-small-2.jpg"
-              width="320"
-              height="180"
-              alt="thumbnail"
-            ></amp-img>
-          </li>
-          <li class="inline-block commerce-product-thumb">
-            <amp-img
-              option="2"
-              layout="responsive"
-              [src]="product[product.selectedColor].thumb.image3"
-              src="/bikestatic/img/e-commerce/product/dark-small-3.jpg"
-              width="320"
-              height="180"
-              alt="thumbnail"
-            ></amp-img>
-          </li>
+          <#list smallImages as img>
+            <li class="inline-block commerce-product-thumb">
+              <amp-img
+                  option="${img?index}"
+                  layout="responsive"
+                  selected="selected"
+                  [src]="product[product.selectedColor].thumb.image${img.sequenceNum}"
+                  src="content/productImage/${img.productContentId}"
+                  width="320"
+                  height="180"
+                  alt="${img.description}"
+              ></amp-img>
+            </li>
+          </#list>
         </ul>
       </amp-selector>
     </div>
