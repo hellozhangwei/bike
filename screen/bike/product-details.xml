@@ -66,6 +66,7 @@ along with this software (see the LICENSE.md file). If not, see
 
         </script>
 
+        <!--build images json, largeImages, smallImages -->
         <set field="black_thumb" from="[:]"/>
         <set field="black_large" from="[:]"/>
         <set field="largeImages" from="[]"/>
