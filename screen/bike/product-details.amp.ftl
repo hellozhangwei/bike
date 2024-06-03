@@ -91,6 +91,8 @@
     </div>
   </div>
 
+  <amp-state id="product" src="product-details/images"></amp-state>
+  <!--
   <amp-state id="product">
     <script type="application/json">
       {
@@ -124,6 +126,7 @@
       }
     </script>
   </amp-state>
+  -->
 
   <section class="flex flex-wrap pb4 md-pb7">
     <div class="col-12 md-col-6 px2 pt2 md-pl7 md-pt4">

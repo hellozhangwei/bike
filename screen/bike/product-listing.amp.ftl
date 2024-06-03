@@ -146,7 +146,7 @@
               <div>
                 <amp-img
                   class="commerce-listing-product-image mb2"
-                  src="content/productImage/{{smallImageInfo.productContentId}}"
+                  src="content/productImage/{{mediumImageInfo.productContentId}}"
                   width="340"
                   height="340"
                   layout="responsive"
