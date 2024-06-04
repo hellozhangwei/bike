@@ -32,7 +32,7 @@
           vel scelerisque nisl consectetur et.
         </p>
         <a
-          href="blog-article.amp.html"
+          href="blog-article"
           class="commerce-blog-link inline-block h7 md-mb4"
           >read more</a
         >
@@ -65,7 +65,7 @@
           vel scelerisque nisl consectetur et.
         </p>
         <a
-          href="blog-article.amp.html"
+          href="blog-article"
           class="commerce-blog-link inline-block h7 md-mb4"
           >read more</a
         >
@@ -98,7 +98,7 @@
           vel scelerisque nisl consectetur et.
         </p>
         <a
-          href="blog-article.amp.html"
+          href="blog-article"
           class="commerce-blog-link inline-block h7 md-mb4"
           >read more</a
         >
@@ -131,7 +131,7 @@
           vel scelerisque nisl consectetur et.
         </p>
         <a
-          href="blog-article.amp.html"
+          href="blog-article"
           class="commerce-blog-link inline-block h7 md-mb4"
           >read more</a
         >

@@ -11,7 +11,7 @@
       <div class="h2 mb3">832874JDB</div>
       <div>
         <a
-          href="product-listing.amp.html"
+          href="product-listing"
           class="ampstart-btn ampstart-btn-secondary caps"
           >continue shopping</a
         >

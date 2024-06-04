@@ -1,6 +1,6 @@
 <main id="content" role="main" class="main commerce-landing">
   <section class="commerce-hero-content-wrapper center overflow-hidden">
-    <a href="product-listing.amp.html" class="text-decoration-none block">
+    <a href="product-listing" class="text-decoration-none block">
       <amp-img
         class="commerce-hero-image"
         src="/bikestatic/img/e-commerce/narrow-landing-01.jpg"
@@ -46,7 +46,7 @@
     </a>
   </section>
   <section class="commerce-hero-content-wrapper center overflow-hidden">
-    <a href="blog-listing.amp.html" class="text-decoration-none block">
+    <a href="blog-listing" class="text-decoration-none block">
       <amp-img
         class="commerce-hero-image"
         src="/bikestatic/img/e-commerce/narrow-landing-02.jpg"
@@ -92,7 +92,7 @@
     </a>
   </section>
   <section class="commerce-hero-content-wrapper center overflow-hidden">
-    <a href="product-listing.amp.html" class="text-decoration-none block">
+    <a href="product-listing" class="text-decoration-none block">
       <amp-img
         class="commerce-hero-image"
         src="/bikestatic/img/e-commerce/narrow-landing-03.jpg"
@@ -138,7 +138,7 @@
     </a>
   </section>
   <section class="commerce-hero-content-wrapper center overflow-hidden">
-    <a href="blog-listing.amp.html" class="text-decoration-none block">
+    <a href="blog-listing" class="text-decoration-none block">
       <amp-img
         class="commerce-hero-image"
         src="/bikestatic/img/e-commerce/narrow-landing-04.jpg"

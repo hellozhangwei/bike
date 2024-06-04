@@ -108,7 +108,7 @@
       </p>
     </div>
     <a
-      href="blog-listing.amp.html"
+      href="blog-listing"
       class="ampstart-btn ampstart-btn-secondary inline-block h7 pt3 mt4 md-mb4"
       >Back to Blog</a
     >

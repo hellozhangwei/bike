@@ -104,7 +104,7 @@
       </p>
       <div class="commerce-cart-actions center">
         <a
-          href="checkout.amp.html"
+          href="checkout"
           class="ampstart-btn ampstart-btn-secondary caps"
           >checkout</a
         >

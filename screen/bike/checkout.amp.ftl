@@ -285,7 +285,7 @@
       </div>
       <div class="commerce-checkout-actions center">
         <a
-          href="checkout-success.amp.html"
+          href="checkout-success"
           class="ampstart-btn ampstart-btn-secondary caps mt3"
           >Continue</a
         >

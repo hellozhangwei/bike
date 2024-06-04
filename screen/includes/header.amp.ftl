@@ -56,7 +56,7 @@
   >
     <div class="mr2"></div>
     <a
-        href="cart.amp.html"
+        href="cart"
         class="text-decoration-none mr2 ampstart-headerbar-fixed-link"
     >
       <div class="ampstart-headerbar-icon-wrapper relative">
