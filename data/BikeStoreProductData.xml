@@ -26,14 +26,14 @@ along with this software (see the LICENSE.md file). If not, see
                 minQuantity="1" price="867" priceUomId="USD"/>
 
         <contents productContentId="BIKE_CHAIN_SET_IM" productContentTypeEnumId="PcntImageMedium" locale="" sequenceNum="1" description="Front"
-                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-small-1.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-medium-1.jpg"/>
 
         <contents productContentId="BIKE_CHAIN_SET_ISF" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="1" description="Front"
-                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-large-1.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-small-1.jpg"/>
         <contents productContentId="BIKE_CHAIN_SET_ISS" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="2" description="Side"
-                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-large-2.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-small-2.jpg"/>
         <contents productContentId="BIKE_CHAIN_SET_ISB" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="3" description="Back"
-                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-large-3.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-small-3.jpg"/>
 
         <contents productContentId="BIKE_CHAIN_SET_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
                   contentLocation="file:runtime/product/BIKE_CHAIN_SET/chain-set-large-1.jpg"/>
@@ -50,8 +50,23 @@ along with this software (see the LICENSE.md file). If not, see
         <prices productPriceId="BIKE_HORN_HANDLES_CLT" pricePurposeEnumId="PppPurchase" priceTypeEnumId="PptCurrent" fromDate="1265184000000"
                 minQuantity="1" price="838" priceUomId="USD"/>
 
+        <contents productContentId="BIKE_HORN_HANDLES_IM" productContentTypeEnumId="PcntImageMedium" locale="" sequenceNum="1" description="Front"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-medium-1.jpg"/>
+
+        <contents productContentId="BIKE_HORN_HANDLES_ISF" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="1" description="Front"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-small-1.jpg"/>
+        <contents productContentId="BIKE_HORN_HANDLES_ISS" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="2" description="Side"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-small-2.jpg"/>
+        <contents productContentId="BIKE_HORN_HANDLES_ISB" productContentTypeEnumId="PcntImageSmall" locale="" sequenceNum="3" description="Back"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-small-3.jpg"/>
+
         <contents productContentId="BIKE_HORN_HANDLES_ILF" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="1" description="Front"
-                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/product-7.jpg"/>
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-large-1.jpg"/>
+        <contents productContentId="BIKE_HORN_HANDLES_ILS" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="2" description="Side"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-large-2.jpg"/>
+        <contents productContentId="BIKE_HORN_HANDLES_ILB" productContentTypeEnumId="PcntImageLarge" locale="" sequenceNum="3" description="Back"
+                  contentLocation="file:runtime/product/BIKE_HORN_HANDLES/horn-handles-large-3.jpg"/>
+
         <contents productContentId="BIKE_HORN_HANDLES_DS" productContentTypeEnumId="PcntDescription" locale="en_US"
                   contentLocation="file:runtime/product/BIKE_HORN_HANDLES/descriptionSmall.amp.html"/>
         <contents productContentId="BIKE_HORN_HANDLES_DL" productContentTypeEnumId="PcntDescriptionLong" locale="en_US"
