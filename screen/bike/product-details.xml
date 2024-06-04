@@ -27,6 +27,9 @@ along with this software (see the LICENSE.md file). If not, see
         ]]></script>
 
         <set field="html_title" value="Product Details"/>
+        <script><![CDATA[
+           context.body_class = "[class]=\"cart.added ? 'commerce-cart-added' : ''\""
+        ]]></script>
 
     </pre-actions>
 
