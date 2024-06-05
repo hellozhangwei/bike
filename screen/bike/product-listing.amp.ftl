@@ -127,6 +127,12 @@
         </div>
       </div>
 
+      <amp-state id="productList">
+        <script type="application/json">
+          ${productListJson}
+        </script>
+      </amp-state>
+<!--  src="/rest/s1/pop/categories/BIKE/products" must be https, only work for local host
       <amp-list
         class="mx1 md-mxn1"
         [src]="'api/' + products.filter + '-' + products.category + '-products.json'"
@@ -135,6 +141,15 @@
         height="1000"
         width="300"
         layout="responsive"
+      >
+-->
+      <amp-list
+          class="mx1 md-mxn1"
+          src="amp-state:productList"
+          items="productList"
+          height="1000"
+          width="300"
+          layout="responsive"
       >
         <template type="amp-mustache">
           <a

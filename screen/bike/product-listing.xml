@@ -27,6 +27,16 @@ along with this software (see the LICENSE.md file). If not, see
 
     </pre-actions>
 
+    <actions>
+        <set field="orderBy" from="'default'"/>
+        <set field="pageIndex" from="0"/>
+        <service-call name="popstore.ProductServices.get#CategoryProducts" out-map="products"
+                      in-map="[productCategoryId:'BIKE', orderBy: orderBy, pageIndex:pageIndex ? pageIndex : '0', pageSize:6]"/>
+
+        <set field="productListJson" from="org.moqui.impl.context.ContextJavaUtil.jacksonMapper.writeValueAsString([productList:products.productList])"/>
+
+    </actions>
+
     <widgets>
         <render-mode><text type="html" location="component://bike/screen/bike/product-listing.amp.ftl"/></render-mode>
     </widgets>
